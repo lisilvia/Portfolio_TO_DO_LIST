@@ -32,7 +32,7 @@ h3 {
   width: 60%;
   height: 100%;
   margin: 2% auto;
-  background-color: whitesmoke;
+  background-color: F9F5F6;
   justify-content: center;
   align-items: center;
   box-shadow: 4px 4px 12px #00000026;
@@ -74,12 +74,16 @@ label {
   display: inline-flex;
 }
 
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #a683e3;
+}
 
 /* Navigation Bar */
 
 .navbar {
     padding: 0rem 0rem;
-    background-color: #F5F5DC;
+    background-color: #F4EEEE;
 }
 
 .navbar-toggler {
