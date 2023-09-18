@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+    <main>
+        <div class="list-outline">         
+            <div>
+                <label>
+                    <div><h1>Today</h1></div>
+                </label>
+            </div>
+            <div class="list-item-wrapper">
+                <% if (todayItem.length) { %>
+                  <p><%= dateDefault %></p>
+                    <%- todayItem %>
+                <% } else { %>
+                    <p>Well done!</p>
+                    <p class="empty-list"><h2>No tasks in the list! 💆‍♀️</h2></p>
+                <% } %>
+            </div>
+            <form action="<%= formAction %>" method="post">
+                <input type="text" name="todoAdd"  id="todo-add" placeholder="Add New Item">
+                <button type="submit"
+                        class="add-item">
+                        <svg class="add-icon list" width="22" height="22"
+                        viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10.5589" cy="10.8837" r="10.0303" stroke="#B3B3B3" />
+                        <path d="M10.5588 5.57489V16.1923" stroke="#B3B3B3" />
+                        <path d="M5.25012 10.8836H15.8675" stroke="#B3B3B3" /></svg>
+                </button>
+                         </div>
+            </form>      
+        </div>
+    </main>
+
+<%- include("partials/footer.ejs") %>
+
